@@ -1,7 +1,8 @@
 # f-string
 name = "John"
+age = 30
 
-print(f"hello world {name}")
+print("hello my name is {name} and I am {age} years old")
 
 
 
