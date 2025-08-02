@@ -10,11 +10,3 @@ age: int = 4
 features: list[str] = ["test", "test2", "test3"]
 
 print(features)
-
-
-
-
-
-
-
-
