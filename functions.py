@@ -1,45 +1,14 @@
-from typing import Union
+from functions import greet_user, send_email
+from data_types import age
+from variables.names import name1
 
-# Simple function
-def print_hello_world():
-    print("Hello, someoneg")
-    print("Hello, Earth!")
-
-print_hello_world()
-
-# Function with arguments
-def greet_user(name: str):
-    print(f"Hello, {name}!")
-
-greet_user("Alice")
-
-# Function with arguments
-
-def send_email(name: str, email: str) -> None:
-    email_template = """Hello {name},
-    Thank you for signing up for our service. We are excited to have you on board!
-    Best regards,
-    The Team
-    """
-    print(email_template.format(name=name))
-
-    print("Email sent to:", email)
-
-    return None
+from calculator.summations_helper import add_numbers
+from variables.names import _secret
 
 
-def add_numbers(a: int, b: int) -> int:
-    return a + b
-
-# example of multiple values returned by a function
-
-def get_user_info():
-    name = "Alice"
-    age = 30
-    email = "alice@example.com"
-    return name, age, email
-
-name, age, email = get_user_info()
+result = add_numbers(5, 11)
+print(result)
 
 
-print(f"Name: {name}, Age: {age}, Email: {email}")
+print(_secret)
+# print")
