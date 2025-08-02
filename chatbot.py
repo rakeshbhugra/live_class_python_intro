@@ -1,3 +1,8 @@
+from litellm import completion
+from dotenv import load_dotenv
+
+load_dotenv()
+
 '''
 class - blueprint
 object/instance of that class - object created using the blueprint
@@ -50,6 +55,16 @@ class Chatbot:
             {'role': sender, 'content': message}
         )
 
-    def get_ai_response(self):
+    def get_ai_response(self, user_query):
+        self.add_message_to_history(user_query, 'user')
         
-    
+        response = completion(
+            model = self.model_name,
+            messages=self.message_history
+        )
+       
+        ai_message = response['choices'][0]['message']['content'] 
+
+        self.add_message_to_history(ai_message, 'assistant')
+
+        return ai_message
