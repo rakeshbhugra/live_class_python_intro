@@ -1,3 +1,4 @@
+# f-string
 name = "John"
 
 print(f"hello world {name}")
