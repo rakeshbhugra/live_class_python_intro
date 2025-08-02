@@ -2,23 +2,18 @@
 name = "John"
 age = 30
 
-print("hello my name is {name} and I am {age} years old")
 
+# type hinting
+age: int = 4
 
+features: list[str] = ["test", "test2", "test3"]
 
-# # type hinting
-
-
-
-
-
-
+print(features)
 
 
 
 
-# age: int = 4
 
-# features: list[str] = ["test", "test2", "test3"]
 
-# print(features)
+
+
