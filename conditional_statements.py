@@ -15,11 +15,15 @@ else:
 
 
 name1 = "John"
-name2 = "hanibal"
+name2 = "john"
 
-if name1 == name2:
-    print("First condition is true")
-elif name1.lower() == name2.lower():
+if name1 != name2:
+    print("Names are not equal")
+
+
+if name1 == name2 and name1.lower() == name2.lower():
+    print("First or second condition is true")
+elif name1.lower() == name2.lower() and name1.upper() == name2.upper():
     print("Second condition is true")
 elif name1.upper() == name2.upper():
     print("Third condition is true")
